@@ -17,8 +17,8 @@
   function zoom(){
   if (zoomLevel<1){
   zoomLevel++
-  let x = boolToInt(event.clientX>500)
-  let y = boolToInt(event.clientY<500)
+  let x = boolToInt(event.clientX>375)
+  let y = boolToInt(event.clientY<375)
   setImg("Images/zoom"+zoomLevel+"x"+x+"y"+y+".jpg")
   }}
   </script>
