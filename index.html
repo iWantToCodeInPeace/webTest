@@ -19,7 +19,7 @@
   zoomLevel++
   let x = boolToInt(event.clientX>375)
   let y = boolToInt(event.clientY<375)
-  setImg(+zoomLevel+"x"+x+"y"+y+".jpg")
+  setImg("zoom"+zoomLevel+"x"+x+"y"+y+".jpg")
   }}
   </script>
   <img id="zoomer" onclick="zoom()" src="Images/zoom0.jpg" style="width:750px;height:750px"></img>
