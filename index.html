@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+<html>
   <body>
   <script>
+  let zoomLevel=0
     function zoom(){
-      let x=event.ClientX;
-      let y=event.ClientY;
-
-    }
+    if (zoomLevel<1){
+    zoomLevel++
+    let x = event.clientX>50
+    let y = event.clientY<50
+      document.getElementById("zoomer").src="Images/zoom"+zoomLevel+"x"+x+"y"+y+".jpg";
+    }}
   </script>
+  <img id="zoomer" onclick="zoom()" src="Images/zoom0.jpg" style="width:100px;height:100px"></img>
   </body>
   </html>
