@@ -7,14 +7,21 @@
   if (bool){return 1}
   else {return 0}
   }
+  function setImg(src){
+    document.getElementById("zoomer").src=src;
+  }
+  function resetZoom(){
+    zoomLevel=0
+    setImg("zoom0.jpg")
+  }
   function zoom(){
   if (zoomLevel<1){
   zoomLevel++
-  let x = boolToInt(event.clientX>50)
-  let y = boolToInt(event.clientY<50)
-    document.getElementById("zoomer").src="Images/zoom"+zoomLevel+"x"+x+"y"+y+".jpg";
+  let x = boolToInt(event.clientX>500)
+  let y = boolToInt(event.clientY<500)
+  setImg("Images/zoom"+zoomLevel+"x"+x+"y"+y+".jpg")
   }}
   </script>
-  <img id="zoomer" onclick="zoom()" src="Images/zoom0.jpg" style="width:100px;height:100px"></img>
+  <img id="zoomer" onclick="zoom()" src="Images/zoom0.jpg" style="width:1000px;height:1000px"></img>
   </body>
   </html>
