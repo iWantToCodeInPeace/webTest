@@ -2,6 +2,8 @@
 <html>
   <body>
   <script>
+  let x=""
+  let y=""
   let zoomLevel=0
   function boolToInt(bool){
   if (bool){return 1}
@@ -12,13 +14,15 @@
   }
   function resetZoom(){
     zoomLevel=0
+    x=""
+    y=""
     setImg("zoom0.jpg")
   }
   function zoom(){
-  if (zoomLevel<1){
+  if (zoomLevel<2){
   zoomLevel++
-  let x = boolToInt(event.clientX>375)
-  let y = boolToInt(event.clientY<375)
+  x=x+boolToInt(event.clientX>375)
+  y=y+boolToInt(event.clientY<375)
   setImg("zoom"+zoomLevel+"x"+x+"y"+y+".jpg")
   }}
   </script>
